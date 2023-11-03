@@ -50,7 +50,7 @@ def callback_handler(call):
         markup = types.InlineKeyboardMarkup()
         employment_department = types.InlineKeyboardButton("Отдел трудоустройства", callback_data="employment_department")
         individual_graphic = types.InlineKeyboardButton("Индивидуальный график", callback_data="individual_graphic")
-        faq = types.InlineKeyboardButton("FAQ", callback_data="faq")
+        faq = types.InlineKeyboardButton("Составление резюме", callback_data="FAQ")
         markup.row(employment_department, individual_graphic)
         markup.row(faq)
         bot.send_message(chat_id, "Что вас интересует?", reply_markup=markup)

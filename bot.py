@@ -16,8 +16,7 @@ def get_text_messages(message):
         vacancy_button = types.KeyboardButton("🎓 Вакансии")
         skip = types.KeyboardButton("")
         job_button = types.KeyboardButton("💼 Помощь в трудоустройстве")
-        resume_tips = types.KeyboardButton("📄 Советы по резюме")
-        buttons.add(navigator_button, vacancy_button, skip, job_button, resume_tips)
+        buttons.add(navigator_button, vacancy_button, skip, job_button)
         bot.send_message(message.chat.id, "Привет!\nБот помогает в трудоустройстве студентам МГКЭИТ\nДля просмотра основной информации, используй меню", reply_markup=buttons)
     
     elif message.text == "⭐ Навигатор МГКЭИТ":
@@ -143,8 +142,7 @@ def send_start_message(chat_id):
     skip = types.KeyboardButton("")
     job_button = types.KeyboardButton("💼 Помощь в трудоустройстве")
     events = types.KeyboardButton("🗓️ События")
-    resume_tips = types.KeyboardButton("📄 Советы по резюме")
-    buttons.add(navigator_button, vacancy_button, skip, job_button, events, skip, resume_tips)
+    buttons.add(navigator_button, vacancy_button, skip, job_button, events, skip)
     bot.send_message(chat_id, "Привет!\nБот помогает в трудоустройстве студентам МГКЭИТ\nДля просмотра основной информации, используй меню", reply_markup=buttons)
 
 bot.polling(none_stop=True, interval=0)
